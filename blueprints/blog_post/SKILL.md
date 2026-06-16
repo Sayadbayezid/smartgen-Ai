@@ -15,3 +15,4 @@ This blueprint scaffolds a new article specifically formatted for automated publ
 4. Write the core content using standard Markdown syntax.
 5. Move the completed file to your project's `content/posts/` directory (e.g., for your GenZ Frontier repository).
 6. Push to GitHub to trigger your automated deployment pipeline.
+follow also 1 [templates.md](templates.md) 2 [write following.md](write following.md)
