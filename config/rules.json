@@ -11,6 +11,10 @@
     "custom_blueprint": {
       "keywords": ["new", "tool", "custom"],
       "required_variables": []
+    },
+    "blog_post": {
+      "keywords": ["blog", "blog post", "article", "news", "content"],
+      "required_variables": []
     }
   }
 }
