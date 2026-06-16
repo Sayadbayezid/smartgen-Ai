@@ -1,0 +1,16 @@
+{
+  "blueprints_mapping": {
+    "data_pipeline": {
+      "keywords": ["data", "pipeline", "etl", "extract"],
+      "required_variables": ["source", "destination"]
+    },
+    "automation_script": {
+      "keywords": ["automate", "script", "task", "job", "automation"],
+      "required_variables": ["schedule"]
+    },
+    "skill_creator": {
+      "keywords": ["smart_skill_creator", "skill creator", "blueprint maker", "smart_skill_creator.md"],
+      "required_variables": []
+    }
+  }
+}
