@@ -1,0 +1,16 @@
+{
+  "blueprints_mapping": {
+    "data_pipeline": {
+      "keywords": ["data", "pipeline", "etl", "extract"],
+      "required_variables": ["source", "destination"]
+    },
+    "automation_script": {
+      "keywords": ["automate", "script", "task", "job"],
+      "required_variables": ["schedule"]
+    },
+    "custom_blueprint": {
+      "keywords": ["new", "tool", "custom"],
+      "required_variables": []
+    }
+  }
+}
