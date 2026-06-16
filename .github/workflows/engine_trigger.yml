@@ -1,0 +1,52 @@
+# ==========================================================
+# SmartGen AI Engine Workflow
+# ----------------------------------------------------------
+# Purpose:
+# Trigger the SmartGen generation pipeline manually through
+# GitHub Actions and produce a deployable .skill package.
+#
+# Workflow:
+# 1. Checkout repository source code.
+# 2. Provision Python runtime environment.
+# 3. Execute the SmartGen orchestration engine.
+# 4. Generate and package the requested automation skill.
+# 5. Upload the resulting .skill artifact for download.
+#
+# Trigger:
+# Manual execution via GitHub Actions workflow_dispatch.
+# ==========================================================
+name: Run SmartGen AI Engine
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: "Specify the automation skill to generate (e.g., build hugo blog)"
+        required: true
+        type: string
+
+jobs:
+  generate-skill:
+    name: Generate SmartGen Skill Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python Environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Initialize SmartGen AI Ecosystem
+        run: |
+          echo "🚀 Starting SmartGen Generation Pipeline..."
+          python main.py "${{ github.event.inputs.prompt }}"
+
+      - name: Upload Generated Skill Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-skill-package
+          path: dist/*.skill
+          retention-days: 14
