@@ -15,13 +15,14 @@
 # Trigger:
 # Manual execution via GitHub Actions workflow_dispatch.
 # ==========================================================
+
 name: Run SmartGen AI Engine
 
 on:
   workflow_dispatch:
     inputs:
       prompt:
-        description: "Specify the automation skill to generate (e.g., build hugo blog)"
+        description: "Specify the automation blueprint to assemble (e.g., build python scraper)"
         required: true
         type: string
 
